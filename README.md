@@ -1,12 +1,12 @@
-# TodoLab — Equipe ___
+# TodoLab — Equipe Danilo-solo
 
 > Repositório da disciplina **Gestão e Qualidade de Software (0006960)** — USJT 2026/2
 > Prof. Alexandre Barbosa
 
 | | |
 |---|---|
-| **Fábrica de software** | |
-| **Integrantes** | |
+| **Fábrica de software** | Danilo-solo |
+| **Integrantes** | Danilo Cassiano de Souza |
 | **Produto publicado** | https://\<usuario>.github.io/\<repositorio>/ |
 | **Project (board)** | |
 | **Revisão e Homologação** | Prof. Alexandre Barbosa |
