@@ -8,7 +8,7 @@
 | **Fábrica de software** | Danilo-solo |
 | **Integrantes** | Danilo Cassiano de Souza |
 | **Produto publicado** | https://\<usuario>.github.io/\<repositorio>/ |
-| **Project (board)** | |
+| **Project (board)** |https://github.com/users/Danilo-4397/projects/2 |
 | **Revisão e Homologação** | Prof. Alexandre Barbosa |
 
 ---
