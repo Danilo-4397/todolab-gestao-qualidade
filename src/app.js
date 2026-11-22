@@ -46,7 +46,10 @@ function render() {
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   const tarefa = store.adicionar(input.value);
-  if (!tarefa) return;
+  if (!tarefa) {
+    input.focus();
+    return;
+  }
   input.value = '';
   input.focus();
   render();
