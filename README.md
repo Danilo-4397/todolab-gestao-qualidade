@@ -56,9 +56,10 @@ Abra `http://localhost:4173`. Para executar o quality gate local:
 
 ```bash
 npm run check
+npm run test:acceptance
 ```
 
-O mesmo gate (`lint` + `build`) roda no GitHub Actions em cada `push` e pull request — é o workflow **Quality Gate 0**, em `.github/workflows/quality-gate.yml`.
+O mesmo gate (`lint` + `build`) roda no GitHub Actions em cada `push` e pull request — é o workflow **Quality Gate 0**, em `.github/workflows/quality-gate.yml`, que também roda `test:acceptance` (nível 2).
 
 ## Papéis da fábrica
 
@@ -116,7 +117,7 @@ Autor do PR, Code Reviewer e Release/DevOps Manager precisam ser pessoas diferen
 └── package.json
 ```
 
-`tests/` e `e2e/` ainda não existem. Os testes automatizados começam na Aula 06; a estrutura e os comandos serão criados quando houver pré-requisitos reais.
+`tests/` guarda os testes de aceitação (`node:test`), escritos antes de cada implementação. `e2e/` ainda não existe: os testes E2E começam na Aula 11.
 
 ## A esteira de qualidade
 
