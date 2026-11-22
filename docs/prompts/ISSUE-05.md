@@ -86,4 +86,4 @@ Verificação manual realizada:
 
 - Ambiguidade encontrada: a Issue não diz onde a seção aparece na página. Decisão: abaixo da fila de tarefas.
 - Próxima melhoria de processo: [preencher depois pela equipe]
-- Atenção: esta branch altera `index.html`, o mesmo arquivo das Issues #2 e #4. Pode haver conflito simples de merge.
+- Esta branch inclui as Issues #2 e #4 (merge sem conflitos). `npm run test:acceptance` com tudo junto passou, e `npm run check` também.
