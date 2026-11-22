@@ -9,6 +9,10 @@ function criarTarefa(titulo) {
   };
 }
 
+export function formatarRestantes(quantidade) {
+  return quantidade === 1 ? '1 item restante' : `${quantidade} itens restantes`;
+}
+
 export class TodoStore {
   constructor(armazenamento = globalThis.localStorage) {
     this.armazenamento = armazenamento;
@@ -29,6 +33,10 @@ export class TodoStore {
 
   listar() {
     return [...this.tarefas];
+  }
+
+  restantes() {
+    return this.tarefas.filter((tarefa) => !tarefa.concluida).length;
   }
 
   quantidadeConcluidas() {
