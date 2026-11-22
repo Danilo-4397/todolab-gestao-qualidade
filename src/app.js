@@ -5,11 +5,13 @@ const form = document.querySelector('#todo-form');
 const input = document.querySelector('#todo-input');
 const list = document.querySelector('#todo-list');
 const emptyState = document.querySelector('#empty-state');
+const clearCompleted = document.querySelector('#clear-completed');
 
 function render() {
   const tarefas = store.listar();
   list.replaceChildren();
   emptyState.hidden = tarefas.length > 0;
+  clearCompleted.hidden = store.quantidadeConcluidas() === 0;
 
   for (const tarefa of tarefas) {
     const item = document.createElement('li');
@@ -42,6 +44,11 @@ function render() {
     list.append(item);
   }
 }
+
+clearCompleted.addEventListener('click', () => {
+  store.limparConcluidas();
+  render();
+});
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();

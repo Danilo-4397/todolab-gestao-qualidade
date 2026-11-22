@@ -31,6 +31,15 @@ export class TodoStore {
     return [...this.tarefas];
   }
 
+  quantidadeConcluidas() {
+    return this.tarefas.filter((tarefa) => tarefa.concluida).length;
+  }
+
+  limparConcluidas() {
+    this.tarefas = this.tarefas.filter((tarefa) => !tarefa.concluida);
+    this.salvar();
+  }
+
   adicionar(titulo) {
     if (!titulo) return null;
     const tarefa = criarTarefa(titulo);
