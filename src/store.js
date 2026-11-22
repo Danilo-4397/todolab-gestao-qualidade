@@ -9,6 +9,10 @@ function criarTarefa(titulo) {
   };
 }
 
+export function formatarRestantes(quantidade) {
+  return quantidade === 1 ? '1 item restante' : `${quantidade} itens restantes`;
+}
+
 export class TodoStore {
   constructor(armazenamento = globalThis.localStorage) {
     this.armazenamento = armazenamento;
@@ -29,6 +33,19 @@ export class TodoStore {
 
   listar() {
     return [...this.tarefas];
+  }
+
+  restantes() {
+    return this.tarefas.filter((tarefa) => !tarefa.concluida).length;
+  }
+
+  quantidadeConcluidas() {
+    return this.tarefas.filter((tarefa) => tarefa.concluida).length;
+  }
+
+  limparConcluidas() {
+    this.tarefas = this.tarefas.filter((tarefa) => !tarefa.concluida);
+    this.salvar();
   }
 
   adicionar(titulo) {
