@@ -1,15 +1,17 @@
-import { TodoStore } from './store.js';
+import { TodoStore, formatarRestantes } from './store.js';
 
 const store = new TodoStore();
 const form = document.querySelector('#todo-form');
 const input = document.querySelector('#todo-input');
 const list = document.querySelector('#todo-list');
 const emptyState = document.querySelector('#empty-state');
+const counter = document.querySelector('#todo-count');
 
 function render() {
   const tarefas = store.listar();
   list.replaceChildren();
   emptyState.hidden = tarefas.length > 0;
+  counter.textContent = formatarRestantes(store.restantes());
 
   for (const tarefa of tarefas) {
     const item = document.createElement('li');
