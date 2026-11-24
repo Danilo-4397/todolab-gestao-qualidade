@@ -23,3 +23,7 @@ jobs:
         run: npm run build
       - name: Testes de aceitação
         run: npm test
+      - name: Cobertura mínima (60%)
+        run: npm run test:coverage
+      - name: Guard-tests
+        run: npm run guard-tests
