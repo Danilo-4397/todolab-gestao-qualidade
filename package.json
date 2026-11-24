@@ -9,6 +9,8 @@
     "build": "node scripts/build.mjs",
     "check": "npm run lint && npm run build",
     "test:acceptance": "node --test",
-    "test": "node --test"
+    "test": "node --test",
+    "test:coverage": "node scripts/coverage.mjs",
+    "guard-tests": "node scripts/guard-tests.mjs"
   }
 }

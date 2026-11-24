@@ -57,6 +57,8 @@ Abra `http://localhost:4173`. Para executar o quality gate local:
 ```bash
 npm run check
 npm test
+npm run test:coverage
+npm run guard-tests
 ```
 
 O mesmo gate (`lint` + `build`) roda no GitHub Actions em cada `push` e pull request — é o workflow **Quality Gate 0**, em `.github/workflows/quality-gate.yml`, que também roda `npm test` (nível 2; `test:acceptance` é um atalho para o mesmo comando).
@@ -128,8 +130,8 @@ Cada nível é um portão novo no CI, ligado na aula indicada. Marquem ✅ confo
 | 0 | 03 | `lint` + `build` (Quality Gate 0) | ✅ |
 | 1 | 04 | template de PR + 1 aprovação de terceiro | ⬜ |
 | 2 | 06 | testes de aceitação no CI (`test:acceptance`) | ✅ |
-| 3 | 10 | cobertura mínima de 60% | ⬜ |
-| 4 | 10 | `guard-tests` (separação de responsabilidades) | ⬜ |
+| 3 | 10 | cobertura mínima de 60% (`test:coverage`) | ✅ |
+| 4 | 10 | `guard-tests` (separação de responsabilidades) | ✅ |
 | 5 | 11 | testes E2E com Playwright | ⬜ |
 | 6 | 11 | branch protection na `main` | ⬜ |
 | 7 | 12 | commits convencionais + release | ⬜ |
