@@ -36,3 +36,9 @@ Danilo Cassiano de Souza em todos os papéis (Tech Lead, QA, Documentation & Met
 ## Registro de decisões
 
 - 2026-11-16: os documentos iniciais (README, rodízio e registro do Quality Gate inicial) foram enviados direto para a main (commit 511ecb6), antes da primeira Issue, como preparação do repositório. A partir da primeira Issue, todo trabalho passa por branch e Pull Request.
+
+- 2026-11-22: o projeto é individual, então não há revisor independente. Os PRs são integrados pelo próprio autor, com autorização do professor para trabalho individual (concedida verbalmente em 16/11/2026, informada pelo autor). Isso é uma exceção à regra "ninguém aprova o próprio PR" e fica registrada aqui como risco de governança. Aguarda-se confirmação do professor.
+- 2026-11-22: as Issues #2, #3, #4 e #5 foram implementadas pelo Claude (Claude Code) e não pelo GitHub Copilot, a pedido do autor. Cada registro em `docs/prompts/ISSUE-NN.md` informa isso. Os testes foram escritos antes de cada implementação (commit `test(...)` anterior ao commit `feat(...)`).
+- 2026-11-22: as Issues #2 a #5 ficaram fora do planejamento da Sprint 01 (que previa #1 e #2). A #2 está nela; #3, #4 e #5 foram adiantadas por decisão do autor devido ao prazo.
+- 2026-11-24: rastreabilidade entre Issues e Pull Requests integrados na main, todos com Quality Gate 0 verde e merge feito pelo autor: Issue #1 → PR #6; Issue #2 → PR #8; Issue #4 → PR #9; Issue #3 → PR #10; Issue #5 → PR #11; Issue #7 → PR #12. Nenhum teve revisão independente; a exceção está registrada acima.
+- 2026-11-24: o teste do Cenário 5 da Issue #5 (falha ao consultar o GitHub) foi feito com a internet do computador desligada, porque o modo Offline do navegador também bloqueia o localhost.
