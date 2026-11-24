@@ -103,3 +103,8 @@ input, button { font: inherit; }
   .workbench__footer { align-items: flex-start; flex-direction: column; }
   .build-mark { display: none; }
 }
+
+.cidade-visor { border-bottom: 1px solid var(--line); }
+.cidade-rolagem { overflow-x: auto; }
+.cidade-rolagem canvas { display: block; max-width: none; }
+.cidade-dica { min-height: 2.2em; margin: 0; padding: 10px 26px; color: var(--muted); font-size: .72rem; }

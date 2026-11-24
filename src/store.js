@@ -9,6 +9,10 @@ function criarTarefa(titulo) {
   };
 }
 
+export function formatarRestantes(quantidade) {
+  return quantidade === 1 ? '1 item restante' : `${quantidade} itens restantes`;
+}
+
 export class TodoStore {
   constructor(armazenamento = globalThis.localStorage) {
     this.armazenamento = armazenamento;
@@ -19,7 +23,12 @@ export class TodoStore {
     if (!this.armazenamento) return [];
     const bruto = this.armazenamento.getItem(CHAVE);
     if (!bruto) return [];
-    return JSON.parse(bruto);
+    try {
+      const dados = JSON.parse(bruto);
+      return Array.isArray(dados) ? dados : [];
+    } catch {
+      return [];
+    }
   }
 
   salvar() {
@@ -31,9 +40,24 @@ export class TodoStore {
     return [...this.tarefas];
   }
 
+  restantes() {
+    return this.tarefas.filter((tarefa) => !tarefa.concluida).length;
+  }
+
+  quantidadeConcluidas() {
+    return this.tarefas.filter((tarefa) => tarefa.concluida).length;
+  }
+
+  limparConcluidas() {
+    this.tarefas = this.tarefas.filter((tarefa) => !tarefa.concluida);
+    this.salvar();
+  }
+
   adicionar(titulo) {
-    if (!titulo) return null;
-    const tarefa = criarTarefa(titulo);
+    if (typeof titulo !== 'string') return null;
+    const tituloNormalizado = titulo.trim();
+    if (!tituloNormalizado) return null;
+    const tarefa = criarTarefa(tituloNormalizado);
     this.tarefas.push(tarefa);
     this.salvar();
     return tarefa;

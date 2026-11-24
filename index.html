@@ -37,8 +37,31 @@
         <ul id="todo-list" class="todo-list" aria-live="polite"></ul>
 
         <footer class="workbench__footer">
+          <p id="todo-count" aria-live="polite"></p>
+          <button type="button" id="clear-completed" class="remove" hidden>Limpar concluídas</button>
           <p id="empty-state">Nenhuma tarefa ainda. Comece com um critério claro.</p>
           <p class="build-mark">build 0.1 · legado inicial</p>
+        </footer>
+      </section>
+
+      <section class="workbench" aria-labelledby="cidade-title">
+        <div class="workbench__top">
+          <div>
+            <p class="label">Cidade do Processo</p>
+            <h2 id="cidade-title">Prédios construídos</h2>
+          </div>
+        </div>
+        <div id="cidade-visor" class="cidade-visor" hidden>
+          <div class="cidade-rolagem">
+            <canvas id="cidade-canvas" role="img" aria-label="Cidade do Processo"></canvas>
+          </div>
+          <p id="cidade-dica" class="cidade-dica" aria-live="polite"></p>
+          <ul id="cidade-lista" class="sr-only" aria-label="PRs e Issues da cidade"></ul>
+        </div>
+
+        <footer class="workbench__footer">
+          <p id="cidade-total" aria-live="polite"></p>
+          <p id="cidade-mensagem" aria-live="polite">Carregando histórico...</p>
         </footer>
       </section>
 
@@ -51,5 +74,6 @@
       </aside>
     </main>
     <script type="module" src="./src/app.js"></script>
+    <script type="module" src="./src/cidade-app.js"></script>
   </body>
 </html>

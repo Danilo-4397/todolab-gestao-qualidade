@@ -1,15 +1,19 @@
-import { TodoStore } from './store.js';
+import { TodoStore, formatarRestantes } from './store.js';
 
 const store = new TodoStore();
 const form = document.querySelector('#todo-form');
 const input = document.querySelector('#todo-input');
 const list = document.querySelector('#todo-list');
 const emptyState = document.querySelector('#empty-state');
+const counter = document.querySelector('#todo-count');
+const clearCompleted = document.querySelector('#clear-completed');
 
 function render() {
   const tarefas = store.listar();
   list.replaceChildren();
   emptyState.hidden = tarefas.length > 0;
+  counter.textContent = formatarRestantes(store.restantes());
+  clearCompleted.hidden = store.quantidadeConcluidas() === 0;
 
   for (const tarefa of tarefas) {
     const item = document.createElement('li');
@@ -43,10 +47,18 @@ function render() {
   }
 }
 
+clearCompleted.addEventListener('click', () => {
+  store.limparConcluidas();
+  render();
+});
+
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   const tarefa = store.adicionar(input.value);
-  if (!tarefa) return;
+  if (!tarefa) {
+    input.focus();
+    return;
+  }
   input.value = '';
   input.focus();
   render();
