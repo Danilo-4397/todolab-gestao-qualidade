@@ -56,10 +56,10 @@ Abra `http://localhost:4173`. Para executar o quality gate local:
 
 ```bash
 npm run check
-npm run test:acceptance
+npm test
 ```
 
-O mesmo gate (`lint` + `build`) roda no GitHub Actions em cada `push` e pull request — é o workflow **Quality Gate 0**, em `.github/workflows/quality-gate.yml`, que também roda `test:acceptance` (nível 2).
+O mesmo gate (`lint` + `build`) roda no GitHub Actions em cada `push` e pull request — é o workflow **Quality Gate 0**, em `.github/workflows/quality-gate.yml`, que também roda `npm test` (nível 2; `test:acceptance` é um atalho para o mesmo comando).
 
 ## Papéis da fábrica
 
