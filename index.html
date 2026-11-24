@@ -44,6 +44,19 @@
         </footer>
       </section>
 
+      <section class="workbench" aria-labelledby="cidade-title">
+        <div class="workbench__top">
+          <div>
+            <p class="label">Cidade do Processo</p>
+            <h2 id="cidade-title">Prédios construídos</h2>
+          </div>
+        </div>
+        <footer class="workbench__footer">
+          <p id="cidade-total" aria-live="polite"></p>
+          <p id="cidade-mensagem" aria-live="polite">Carregando histórico...</p>
+        </footer>
+      </section>
+
       <aside class="contract">
         <p class="contract__number">01</p>
         <div>
@@ -53,5 +66,6 @@
       </aside>
     </main>
     <script type="module" src="./src/app.js"></script>
+    <script type="module" src="./src/cidade-app.js"></script>
   </body>
 </html>
