@@ -23,7 +23,12 @@ export class TodoStore {
     if (!this.armazenamento) return [];
     const bruto = this.armazenamento.getItem(CHAVE);
     if (!bruto) return [];
-    return JSON.parse(bruto);
+    try {
+      const dados = JSON.parse(bruto);
+      return Array.isArray(dados) ? dados : [];
+    } catch {
+      return [];
+    }
   }
 
   salvar() {
