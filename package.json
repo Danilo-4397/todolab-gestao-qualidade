@@ -7,6 +7,8 @@
     "dev": "node scripts/dev.mjs",
     "lint": "node scripts/lint.mjs",
     "build": "node scripts/build.mjs",
-    "check": "npm run lint && npm run build"
+    "check": "npm run lint && npm run build",
+    "test:acceptance": "node --test",
+    "test": "node --test"
   }
 }

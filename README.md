@@ -56,9 +56,10 @@ Abra `http://localhost:4173`. Para executar o quality gate local:
 
 ```bash
 npm run check
+npm test
 ```
 
-O mesmo gate (`lint` + `build`) roda no GitHub Actions em cada `push` e pull request — é o workflow **Quality Gate 0**, em `.github/workflows/quality-gate.yml`.
+O mesmo gate (`lint` + `build`) roda no GitHub Actions em cada `push` e pull request — é o workflow **Quality Gate 0**, em `.github/workflows/quality-gate.yml`, que também roda `npm test` (nível 2; `test:acceptance` é um atalho para o mesmo comando).
 
 ## Papéis da fábrica
 
@@ -116,7 +117,7 @@ Autor do PR, Code Reviewer e Release/DevOps Manager precisam ser pessoas diferen
 └── package.json
 ```
 
-`tests/` e `e2e/` ainda não existem. Os testes automatizados começam na Aula 06; a estrutura e os comandos serão criados quando houver pré-requisitos reais.
+`tests/` guarda os testes de aceitação (`node:test`), escritos antes de cada implementação. `e2e/` ainda não existe: os testes E2E começam na Aula 11.
 
 ## A esteira de qualidade
 
@@ -126,7 +127,7 @@ Cada nível é um portão novo no CI, ligado na aula indicada. Marquem ✅ confo
 |---:|---:|---|:---:|
 | 0 | 03 | `lint` + `build` (Quality Gate 0) | ✅ |
 | 1 | 04 | template de PR + 1 aprovação de terceiro | ⬜ |
-| 2 | 06 | testes de aceitação no CI (`test:acceptance`) | ⬜ |
+| 2 | 06 | testes de aceitação no CI (`test:acceptance`) | ✅ |
 | 3 | 10 | cobertura mínima de 60% | ⬜ |
 | 4 | 10 | `guard-tests` (separação de responsabilidades) | ⬜ |
 | 5 | 11 | testes E2E com Playwright | ⬜ |
