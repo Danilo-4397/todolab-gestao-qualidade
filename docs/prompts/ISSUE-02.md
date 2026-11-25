@@ -44,7 +44,7 @@ não alterar scripts/, .github/ nem CSS, menor alteração possível.
 - [ ] O diff foi lido pela equipe.
 - [ ] Os critérios de aceite foram comparados com a alteração.
 - [x] `npm run check` foi executado e o resultado real foi registrado (abaixo).
-- [ ] A verificação manual no navegador foi realizada. **Pendente: ainda não foi feita por ninguém.**
+- [x] A verificação manual no navegador foi realizada pelo autor em 2026-11-24 (resultado abaixo).
 - [ ] Pendências, limitações ou dúvidas foram registradas abaixo.
 
 Resultado do teste antes da implementação (`node --test tests/contador.test.js`, Node v22.23.4):
@@ -67,20 +67,20 @@ Lint aprovado e Build aprovado: artefato gerado em dist/.
 
 Verificação manual realizada:
 
-- Passos: **pendente** (rodar `npm run dev`, abrir http://localhost:4173 e executar os 7 cenários da Issue #2).
-- Resultado observado: **pendente**
+- Passos: cenários da Issue executados em `npm run dev` (http://localhost:4173).
+- Resultado observado: Cenários 1 a 7 executados no navegador em 2026-11-24, no localhost:4173. Resultado relatado pelo autor: todos conforme esperado.
 - Pendências ou riscos: a atualização do contador na tela (Cenário 4 e 6) só foi verificada por teste da regra, não no navegador.
 
 ## Pull Request e revisão
 
-- URL ou número do Pull Request: [preencher depois]
+- URL ou número do Pull Request: #8 (https://github.com/Danilo-4397/todolab-gestao-qualidade/pull/8)
 - Autor do Pull Request: Danilo Cassiano de Souza
-- Revisor (integrante diferente do autor): [a definir]
-- O PR contém `Closes #2`? [ ] sim [ ] não
-- Commit ou hash da versão revisada: [preencher depois]
-- Resultado do CI: [ ] verde [ ] vermelho [ ] ainda em execução
-- Comentário substantivo do revisor: [preencher depois]
-- Decisão: [ ] merge autorizado [ ] mudanças solicitadas [x] pendente
+- Revisor (integrante diferente do autor): nenhum. Projeto individual; a exceção está registrada em docs/diario.md e em comentário no PR.
+- O PR contém `Closes #2`? [x] sim [ ] não
+- Commit ou hash da versão revisada: 7fe5b9c (último commit da branch); commit do merge na main: a6adb01
+- Resultado do CI: [x] verde [ ] vermelho [ ] ainda em execução (Quality Gate 0, job lint-and-build, no último commit da branch)
+- Comentário substantivo do revisor: não houve revisão independente; o autor registrou a exceção em comentário no PR.
+- Decisão: merge feito pelo autor, sem revisão independente (exceção registrada em docs/diario.md). A revisão independente segue pendente.
 
 ## Aprendizado da rodada
 

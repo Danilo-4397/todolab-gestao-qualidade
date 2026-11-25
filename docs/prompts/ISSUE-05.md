@@ -45,7 +45,7 @@ não alterar o gerenciador de tarefas existente, sem CSS novo.
 - [ ] O diff foi lido pela equipe.
 - [ ] Os critérios de aceite foram comparados com a alteração.
 - [x] `npm run check` foi executado (abaixo).
-- [ ] A verificação manual no navegador foi realizada. **Pendente: ninguém fez ainda.**
+- [x] A verificação manual no navegador foi realizada pelo autor em 2026-11-24 (resultado abaixo).
 - [ ] Pendências, limitações ou dúvidas foram registradas abaixo.
 
 Resultado do teste antes da implementação (`node --test tests/cidade.test.js`, Node v22.23.4):
@@ -69,18 +69,18 @@ Build aprovado: artefato gerado em dist/.
 
 Verificação manual realizada:
 
-- Passos: **pendente**. Comparar o número na página com Pull requests > Closed > Merged no GitHub (Cenários 3 e 4); F12 > Network > Offline e recarregar (Cenário 5). O Cenário 2 só pode ser visto depois do primeiro PR integrado.
-- Resultado observado: **pendente**
+- Passos: cenários da Issue executados em `npm run dev` (http://localhost:4173).
+- Resultado observado: A página mostrou 5 prédios, igual aos 5 PRs integrados no GitHub (Cenários 3 e 4). Com a internet do computador desligada, apareceu "Não foi possível carregar o histórico." e não "0 prédios" (Cenário 5). Os Cenários 1 e 2 (zero e um PR) só foram cobertos por teste automatizado.
 - Os Cenários 3 e 4 contra o GitHub real só foram cobertos com resposta simulada nos testes.
 
 ## Pull Request e revisão
 
-- URL ou número do Pull Request: [preencher depois]
+- URL ou número do Pull Request: #11 (https://github.com/Danilo-4397/todolab-gestao-qualidade/pull/11)
 - Autor do Pull Request: Danilo Cassiano de Souza
-- Revisor (integrante diferente do autor): [a definir]
-- O PR contém `Closes #5`? [ ] sim [ ] não
-- Resultado do CI: [ ] verde [ ] vermelho [ ] ainda em execução
-- Decisão: [ ] merge autorizado [ ] mudanças solicitadas [x] pendente
+- Revisor (integrante diferente do autor): nenhum. Projeto individual; a exceção está registrada em docs/diario.md e em comentário no PR.
+- O PR contém `Closes #5`? [x] sim [ ] não
+- Resultado do CI: [x] verde [ ] vermelho [ ] ainda em execução (Quality Gate 0, job lint-and-build, no último commit da branch)
+- Decisão: merge feito pelo autor, sem revisão independente (exceção registrada em docs/diario.md). A revisão independente segue pendente.
 
 ## Aprendizado da rodada
 
