@@ -40,3 +40,25 @@ jobs:
           name: playwright-report
           path: playwright-report/
           retention-days: 14
+
+  metricas-do-pr:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Gerar resumo de métricas
+        run: node scripts/metricas.mjs "origin/${{ github.base_ref }}" | tee metricas.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Comentar métricas no Pull Request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh pr comment "${{ github.event.pull_request.number }}" --body-file metricas.md --edit-last --create-if-none
