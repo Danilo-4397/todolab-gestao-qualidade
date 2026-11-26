@@ -11,6 +11,10 @@
     "test:acceptance": "node --test",
     "test": "node --test",
     "test:coverage": "node scripts/coverage.mjs",
-    "guard-tests": "node scripts/guard-tests.mjs"
+    "guard-tests": "node scripts/guard-tests.mjs",
+    "test:e2e": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0"
   }
 }
