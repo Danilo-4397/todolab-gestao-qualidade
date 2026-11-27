@@ -84,19 +84,19 @@ Verificação manual realizada:
 
 ## Pull Request e revisão
 
-- URL ou número do Pull Request: [preencher depois]
+- URL ou número do Pull Request: #6 (https://github.com/Danilo-4397/todolab-gestao-qualidade/pull/6)
 - Autor do Pull Request: Danilo Cassiano de Souza
-- Revisor (integrante diferente do autor): [a definir]
-- O PR contém `Closes #1`? [ ] sim [ ] não
-- Commit ou hash da versão revisada: [preencher depois]
-- Resultado do CI: [ ] verde [ ] vermelho [ ] ainda em execução
-- Comentário substantivo do revisor (referencie um critério de aceite): [preencher depois]
-- Há mudanças solicitadas abertas? [ ] sim [ ] não
-- A aprovação é da versão atual, depois das últimas correções? [ ] sim [ ] não [ ] não houve correção
-- Aceite manual registrado, com cenários e resultado observado: [preencher depois]
-- Decisão: [ ] merge autorizado [ ] mudanças solicitadas [ ] pendente
+- Revisor (integrante diferente do autor): nenhum. Projeto individual; a exceção está registrada em docs/diario.md e em comentário no PR.
+- O PR contém `Closes #1`? [x] sim [ ] não
+- Commit ou hash da versão revisada: 7abca12 (último commit da branch); commit do merge na main: 5816330
+- Resultado do CI: [x] verde [ ] vermelho [ ] ainda em execução (Quality Gate 0, job lint-and-build, no último commit da branch)
+- Comentário substantivo do revisor: não houve revisão independente; o autor registrou a exceção em comentário no PR.
+- Há mudanças solicitadas abertas? [ ] sim [x] não (não houve revisão)
+- A aprovação é da versão atual, depois das últimas correções? [ ] sim [ ] não [x] não houve aprovação de terceiro
+- Aceite manual registrado, com cenários e resultado observado: [a preencher pelo autor: a seção "Verificação manual realizada" acima ainda está em branco]
+- Decisão: merge feito pelo autor, sem revisão independente (exceção registrada em docs/diario.md). A revisão independente segue pendente.
 
-O merge só é autorizado com CI verde, nenhuma mudança solicitada aberta, aceite manual registrado e aprovação da versão atual. Enquanto qualquer condição faltar, a decisão permanece pendente.
+O merge só é autorizado com CI verde, nenhuma mudança solicitada aberta, aceite manual registrado e aprovação da versão atual. Nesta rodada faltou a aprovação de terceiro (projeto individual); o merge foi feito pelo autor como exceção registrada.
 
 ## Aprendizado da rodada
 
