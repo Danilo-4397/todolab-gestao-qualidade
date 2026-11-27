@@ -59,6 +59,8 @@ npm run check
 npm test
 npm run test:coverage
 npm run guard-tests
+npm ci && npx playwright install chromium   # só na primeira vez
+npm run test:e2e
 ```
 
 O mesmo gate (`lint` + `build`) roda no GitHub Actions em cada `push` e pull request — é o workflow **Quality Gate 0**, em `.github/workflows/quality-gate.yml`, que também roda `npm test` (nível 2; `test:acceptance` é um atalho para o mesmo comando).
@@ -119,7 +121,7 @@ Autor do PR, Code Reviewer e Release/DevOps Manager precisam ser pessoas diferen
 └── package.json
 ```
 
-`tests/` guarda os testes de aceitação (`node:test`), escritos antes de cada implementação. `e2e/` ainda não existe: os testes E2E começam na Aula 11.
+`tests/` guarda os testes de aceitação (`node:test`), escritos antes de cada implementação. `e2e/` guarda os testes de ponta a ponta com Playwright (a única dependência do projeto, só de desenvolvimento).
 
 ## A esteira de qualidade
 
@@ -132,7 +134,7 @@ Cada nível é um portão novo no CI, ligado na aula indicada. Marquem ✅ confo
 | 2 | 06 | testes de aceitação no CI (`test:acceptance`) | ✅ |
 | 3 | 10 | cobertura mínima de 60% (`test:coverage`) | ✅ |
 | 4 | 10 | `guard-tests` (separação de responsabilidades) | ✅ |
-| 5 | 11 | testes E2E com Playwright | ⬜ |
+| 5 | 11 | testes E2E com Playwright (`test:e2e`) | ✅ |
 | 6 | 11 | branch protection na `main` | ⬜ |
 | 7 | 12 | commits convencionais + release | ⬜ |
 | 8 | 12 | resumo de métricas no Pull Request | ⬜ |
