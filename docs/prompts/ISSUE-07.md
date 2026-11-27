@@ -47,7 +47,7 @@ não alterar o gerenciador de tarefas existente.
 - [ ] O diff foi lido pela equipe.
 - [ ] Os critérios de aceite foram comparados com a alteração.
 - [x] `npm run check` foi executado (abaixo).
-- [ ] A verificação manual no navegador, com os dados reais do GitHub, foi realizada. **Pendente: ninguém fez ainda.**
+- [x] A verificação manual no navegador foi realizada pelo autor em 2026-11-24 (resultado abaixo).
 - [ ] Pendências, limitações ou dúvidas foram registradas abaixo.
 
 Resultado do teste antes da implementação (`node --test tests/cidade-canvas.test.js`, Node v22.23.4):
@@ -78,17 +78,17 @@ Verificação feita pela IA, com navegador sem interface e **dados simulados** (
 
 Verificação manual realizada pela equipe:
 
-- Passos: **pendente** (rodar `npm run dev`, comparar prédios com Pull requests > Closed > Merged e obras com Issues > Open).
-- Resultado observado: **pendente**
+- Passos: cenários da Issue executados em `npm run dev` (http://localhost:4173).
+- Resultado observado: A página mostrou 5 prédios e 1 obra, iguais aos 5 PRs integrados e à única Issue aberta (a #7). O Cenário 6 (dica ao passar o mouse) não foi confirmado pelo autor no navegador; só por teste automatizado e pela verificação da IA com dados simulados.
 
 ## Pull Request e revisão
 
-- URL ou número do Pull Request: [preencher depois]
+- URL ou número do Pull Request: #12 (https://github.com/Danilo-4397/todolab-gestao-qualidade/pull/12)
 - Autor do Pull Request: Danilo Cassiano de Souza
-- Revisor (integrante diferente do autor): [a definir]
-- O PR contém `Closes #7`? [ ] sim [ ] não
-- Resultado do CI: [ ] verde [ ] vermelho [ ] ainda em execução
-- Decisão: [ ] merge autorizado [ ] mudanças solicitadas [x] pendente
+- Revisor (integrante diferente do autor): nenhum. Projeto individual; a exceção está registrada em docs/diario.md e em comentário no PR.
+- O PR contém `Closes #7`? [x] sim [ ] não
+- Resultado do CI: [x] verde [ ] vermelho [ ] ainda em execução (Quality Gate 0, job lint-and-build, no último commit da branch)
+- Decisão: merge feito pelo autor, sem revisão independente (exceção registrada em docs/diario.md). A revisão independente segue pendente.
 
 ## Aprendizado da rodada
 
