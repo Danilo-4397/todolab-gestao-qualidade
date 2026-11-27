@@ -7,7 +7,7 @@
 |---|---|
 | **Fábrica de software** | Danilo-solo |
 | **Integrantes** | Danilo Cassiano de Souza |
-| **Produto publicado** | https://\<usuario>.github.io/\<repositorio>/ |
+| **Produto publicado** | https://danilo-4397.github.io/todolab-gestao-qualidade/ |
 | **Project (board)** |https://github.com/users/Danilo-4397/projects/2 |
 
 
