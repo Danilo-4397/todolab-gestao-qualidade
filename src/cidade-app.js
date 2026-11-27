@@ -18,12 +18,26 @@ if (resultado.plano) {
   const ctx = canvas.getContext('2d');
   let destaque = null;
 
-  canvas.width = plano.largura;
-  canvas.height = plano.altura;
-  canvas.setAttribute('aria-label', textoAlternativo(plano).split('\n')[0]);
+  // A cidade é desenhada em unidades lógicas e ampliada: o canvas tem resolução da tela, sem borrar.
   visor.hidden = false;
+  const rolagem = canvas.parentElement;
+  const ampliacao = Math.min(1.8, Math.max(1.25, rolagem.clientWidth / plano.largura));
+  const densidade = globalThis.devicePixelRatio || 1;
+  const escalaCanvas = ampliacao * densidade;
+  canvas.width = Math.round(plano.largura * escalaCanvas);
+  canvas.height = Math.round(plano.altura * escalaCanvas);
+  canvas.style.width = `${plano.largura * ampliacao}px`;
+  canvas.style.height = `${plano.altura * ampliacao}px`;
+  rolagem.style.setProperty('--solo', `${(plano.chao) * ampliacao}px`);
+  canvas.setAttribute('aria-label', textoAlternativo(plano).split('\n')[0]);
 
-  const redesenhar = (progresso = 1) => desenharCidade(ctx, plano, { progresso, destaque });
+  // com muitos prédios, abre mostrando os mais recentes
+  rolagem.scrollLeft = rolagem.scrollWidth;
+
+  const redesenhar = (progresso = 1) => {
+    ctx.setTransform(escalaCanvas, 0, 0, escalaCanvas, 0, 0);
+    desenharCidade(ctx, plano, { progresso, destaque });
+  };
 
   const destacar = (item) => {
     destaque = item;
@@ -43,7 +57,7 @@ if (resultado.plano) {
 
   canvas.addEventListener('mousemove', (evento) => {
     const caixa = canvas.getBoundingClientRect();
-    const escala = canvas.width / caixa.width;
+    const escala = plano.largura / caixa.width;
     const item = acharPorPonto(plano, (evento.clientX - caixa.left) * escala, (evento.clientY - caixa.top) * escala);
     if (item?.numero !== destaque?.numero) destacar(item);
   });

@@ -1,12 +1,15 @@
 :root {
   color-scheme: dark;
-  --ink: #f4f0e8;
-  --muted: #a7a39a;
-  --night: #101210;
-  --panel: #191c19;
-  --line: #343a34;
-  --acid: #c7ff43;
-  --orange: #ff6b35;
+  --noite: #0d1224;
+  --crepusculo: #1c2547;
+  --lua: #f1ece1;
+  --tinta: #1b1f33;
+  --suave: #5c6178;
+  --ambar: #ffc857;
+  --coral: #b3321f;
+  --linha: #d9d2c3;
+  --serifa: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+  --sans: 'Segoe UI', system-ui, -apple-system, Roboto, sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -14,97 +17,148 @@
 body {
   margin: 0;
   min-height: 100vh;
-  color: var(--ink);
-  background: var(--night);
-  font-family: 'Cascadia Mono', 'Lucida Console', monospace;
+  color: var(--lua);
+  background: linear-gradient(180deg, var(--noite) 0, var(--crepusculo) 760px, #262b52 100%);
+  background-color: var(--crepusculo);
+  font-family: var(--sans);
+  line-height: 1.5;
 }
-
-.ambient {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background:
-    linear-gradient(90deg, transparent 49.8%, rgb(255 255 255 / 4%) 50%, transparent 50.2%),
-    radial-gradient(circle at 76% 16%, rgb(199 255 67 / 12%), transparent 24%),
-    radial-gradient(circle at 14% 85%, rgb(255 107 53 / 9%), transparent 28%);
-}
-
-.shell {
-  position: relative;
-  width: min(1100px, calc(100% - 40px));
-  margin: 0 auto;
-  padding: 72px 0 56px;
-}
-
-.masthead { margin-bottom: 48px; }
-.eyebrow, .label { color: var(--muted); font-size: .72rem; letter-spacing: .13em; text-transform: uppercase; }
-.eyebrow span { color: var(--acid); }
 
 h1, h2, p { margin-top: 0; }
-h1 {
-  margin-bottom: 4px;
-  font-family: 'Bodoni MT', Didot, Georgia, serif;
-  font-size: clamp(4.8rem, 14vw, 10rem);
-  line-height: .82;
-  letter-spacing: -.075em;
-}
-h1 span { color: var(--acid); font-style: italic; }
-.thesis { max-width: 560px; color: var(--muted); font-size: .92rem; }
+h1, h2 { font-family: var(--serifa); font-weight: 600; }
 
-.workbench {
-  border: 1px solid var(--line);
-  background: rgb(25 28 25 / 88%);
-  box-shadow: 18px 18px 0 #090a09;
+.pagina {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 56px 0 48px;
 }
 
-.workbench__top, .workbench__footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  padding: 22px 26px;
-}
-.workbench__top { border-bottom: 1px solid var(--line); }
-.workbench__top h2 { margin: 0; font-family: 'Bodoni MT', Didot, Georgia, serif; font-size: 2rem; }
-.label { margin-bottom: 5px; }
-.status { display: flex; align-items: center; gap: 9px; color: var(--acid); font-size: .72rem; text-transform: uppercase; }
-.status__light { width: 9px; height: 9px; border-radius: 50%; background: var(--acid); box-shadow: 0 0 18px var(--acid); }
+.topo { margin-bottom: 28px; }
+.topo h1 { margin-bottom: 8px; font-size: clamp(3.2rem, 9vw, 5.6rem); line-height: .95; letter-spacing: -.03em; }
+.tese { max-width: 52ch; margin-bottom: 0; color: #c9c4d6; font-size: 1.05rem; }
 
-.composer { display: grid; grid-template-columns: 1fr auto; padding: 26px; border-bottom: 1px solid var(--line); }
+/* ---- Cidade ---- */
+.cidade { margin-bottom: 36px; }
+.cidade__cabecalho { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; margin-bottom: 16px; }
+.cidade h2 { margin-bottom: 4px; font-size: 1.7rem; }
+.cidade__apoio { margin: 0; color: #c9c4d6; max-width: 58ch; }
+.cidade__total { margin: 0; color: var(--ambar); font-family: var(--serifa); font-size: 1.5rem; white-space: nowrap; }
+.cidade__mensagem { margin: 12px 0 0; color: #c9c4d6; }
+.cidade__mensagem:empty { display: none; }
+
+.cidade-visor {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  background:
+    radial-gradient(1.2px 1.2px at 12% 18%, #fff, transparent),
+    radial-gradient(1px 1px at 27% 38%, #dfe4ff, transparent),
+    radial-gradient(1.4px 1.4px at 41% 12%, #fff, transparent),
+    radial-gradient(1px 1px at 58% 30%, #dfe4ff, transparent),
+    radial-gradient(1.2px 1.2px at 73% 16%, #fff, transparent),
+    radial-gradient(1px 1px at 88% 34%, #dfe4ff, transparent),
+    linear-gradient(180deg, #080b1a 0, #1d2650 62%, #5b4a86 100%);
+  box-shadow: 0 24px 60px rgb(3 5 15 / 55%);
+}
+.cidade-visor::before {
+  content: '';
+  position: absolute;
+  top: 22px;
+  right: 7%;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #f6efd8;
+  box-shadow: 0 0 40px 8px rgb(246 239 216 / 28%), inset -12px -4px 0 #d9ceb0;
+}
+.cidade-rolagem {
+  --solo: 200px;
+  position: relative;
+  overflow-x: auto;
+  padding-top: 70px;
+  background:
+    linear-gradient(to bottom, transparent calc(var(--solo) + 70px - 3px), #3a4270 calc(var(--solo) + 70px - 3px), #3a4270 calc(var(--solo) + 70px), #0a0e1c calc(var(--solo) + 70px)) local;
+}
+.cidade-rolagem canvas { display: block; max-width: none; }
+.cidade-dica { min-height: 2.4em; margin: 0; padding: 9px 20px; color: #c9c4d6; font-size: .9rem; background: #0a0e1c; }
+
+.legenda { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 14px 0 0; padding: 0; list-style: none; color: #c9c4d6; font-size: .85rem; }
+.legenda li { display: flex; align-items: center; gap: 7px; }
+.legenda__cor { width: 12px; height: 12px; border-radius: 3px; }
+
+/* ---- Tarefas ---- */
+.tarefas {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 28px 30px 8px;
+  color: var(--tinta);
+  color-scheme: light;
+  background: var(--lua);
+  border-radius: 14px;
+  box-shadow: 0 24px 60px rgb(3 5 15 / 45%);
+}
+.tarefas h2 { margin-bottom: 18px; font-size: 1.7rem; }
+
 input, button { font: inherit; }
-.composer input { min-width: 0; padding: 17px 18px; color: var(--ink); background: #0f110f; border: 1px solid var(--line); border-right: 0; outline: none; }
-.composer input:focus { border-color: var(--acid); box-shadow: inset 4px 0 0 var(--acid); }
-.composer button { padding: 0 24px; color: #101210; background: var(--acid); border: 1px solid var(--acid); cursor: pointer; font-weight: 500; }
-.composer button:hover { background: var(--ink); border-color: var(--ink); }
+.compor { display: grid; grid-template-columns: 1fr auto; gap: 10px; margin-bottom: 8px; }
+.compor input {
+  min-width: 0;
+  padding: 13px 16px;
+  color: var(--tinta);
+  background: #fff;
+  border: 2px solid var(--linha);
+  border-radius: 10px;
+  outline: none;
+}
+.compor input:focus { border-color: var(--crepusculo); box-shadow: 0 0 0 3px rgb(255 200 87 / 55%); }
+.compor button {
+  padding: 0 24px;
+  color: var(--noite);
+  background: var(--ambar);
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.compor button:hover { background: #ffb52e; }
+.compor button:focus-visible, .remove:focus-visible, .todo input:focus-visible { outline: 3px solid var(--crepusculo); outline-offset: 2px; }
 
-.todo-list { list-style: none; margin: 0; padding: 0 26px; }
-.todo { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 16px; min-height: 64px; border-bottom: 1px solid var(--line); animation: arrive .25s ease-out both; }
-.todo input { width: 19px; height: 19px; accent-color: var(--acid); }
-.todo--done span { color: var(--muted); text-decoration: line-through; }
-.remove { color: var(--orange); background: transparent; border: 0; cursor: pointer; font-size: .72rem; text-transform: uppercase; }
+.todo-list { list-style: none; margin: 0; padding: 0; }
+.todo {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 14px;
+  min-height: 58px;
+  border-bottom: 1px solid var(--linha);
+  animation: chegar .25s ease-out both;
+}
+.todo input { width: 20px; height: 20px; accent-color: var(--crepusculo); }
+.todo--done span { color: var(--suave); text-decoration: line-through; }
+.remove { padding: 6px 4px; color: var(--coral); background: transparent; border: 0; border-radius: 6px; cursor: pointer; font-size: .9rem; }
 .remove:hover { text-decoration: underline; }
 
-.workbench__footer { color: var(--muted); font-size: .72rem; }
-.workbench__footer p { margin: 0; }
-.build-mark { text-transform: uppercase; }
+.tarefas__rodape { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 0; color: var(--suave); }
+.tarefas__rodape p { margin: 0; }
 
-.contract { display: grid; grid-template-columns: auto 1fr; gap: 20px; align-items: start; max-width: 590px; margin: 54px 0 0 auto; }
-.contract__number { color: var(--orange); font-family: 'Bodoni MT', Didot, Georgia, serif; font-size: 4rem; line-height: .8; }
-.contract > div > p:last-child { font-family: 'Bodoni MT', Didot, Georgia, serif; font-size: 1.4rem; }
+.assinatura { max-width: 760px; margin: 40px auto 0; color: #c9c4d6; text-align: center; }
+.assinatura p { margin: 0 0 4px; }
+.assinatura p:first-child { font-family: var(--serifa); font-size: 1.2rem; color: var(--lua); }
+.assinatura p:last-child { font-size: .85rem; }
+
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 
-@keyframes arrive { from { opacity: 0; transform: translateY(-6px); } }
+@keyframes chegar { from { opacity: 0; transform: translateY(-6px); } }
 
-@media (max-width: 620px) {
-  .shell { width: min(100% - 24px, 1100px); padding-top: 44px; }
-  .composer { grid-template-columns: 1fr; }
-  .composer input { border-right: 1px solid var(--line); }
-  .composer button { min-height: 50px; }
-  .workbench__footer { align-items: flex-start; flex-direction: column; }
-  .build-mark { display: none; }
+@media (prefers-reduced-motion: reduce) {
+  .todo { animation: none; }
 }
 
-.cidade-visor { border-bottom: 1px solid var(--line); }
-.cidade-rolagem { overflow-x: auto; }
-.cidade-rolagem canvas { display: block; max-width: none; }
-.cidade-dica { min-height: 2.2em; margin: 0; padding: 10px 26px; color: var(--muted); font-size: .72rem; }
+@media (max-width: 620px) {
+  .pagina { width: min(100% - 24px, 1120px); padding-top: 36px; }
+  .cidade__cabecalho { align-items: flex-start; flex-direction: column; gap: 6px; }
+  .tarefas { padding: 22px 18px 4px; }
+  .compor { grid-template-columns: 1fr; }
+  .compor button { min-height: 48px; }
+  .tarefas__rodape { align-items: flex-start; flex-direction: column; gap: 8px; }
+}
