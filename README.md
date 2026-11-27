@@ -135,7 +135,7 @@ Cada nível é um portão novo no CI, ligado na aula indicada. Marquem ✅ confo
 | 3 | 10 | cobertura mínima de 60% (`test:coverage`) | ✅ |
 | 4 | 10 | `guard-tests` (separação de responsabilidades) | ✅ |
 | 5 | 11 | testes E2E com Playwright (`test:e2e`) | ✅ |
-| 6 | 11 | branch protection na `main` | ⬜ |
+| 6 | 11 | branch protection na `main` | ✅ |
 | 7 | 12 | commits convencionais + release | ⬜ |
 | 8 | 12 | resumo de métricas no Pull Request | ✅ |
 

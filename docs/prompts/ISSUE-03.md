@@ -41,7 +41,7 @@ Regras: teste antes, JavaScript puro, menor alteração possível, sem tocar em 
 - [ ] O diff foi lido pela equipe.
 - [ ] Os critérios de aceite foram comparados com a alteração.
 - [x] `npm run check` foi executado (abaixo).
-- [ ] A verificação manual no navegador foi realizada. **Pendente: ninguém fez ainda.**
+- [x] A verificação manual no navegador foi realizada pelo autor em 2026-11-24 (resultado abaixo).
 - [ ] Pendências, limitações ou dúvidas foram registradas abaixo.
 
 Resultado do teste antes da implementação (`node --test tests/persistencia.test.js`, Node v22.23.4):
@@ -65,17 +65,17 @@ Build aprovado: artefato gerado em dist/.
 
 Verificação manual realizada:
 
-- Passos: **pendente** (F12 > Application > Local Storage, editar `todolab:tarefas` para `{abc`, F5, conferir Console sem erro vermelho; depois `{"a":1}`).
-- Resultado observado: **pendente**
+- Passos: cenários da Issue executados em `npm run dev` (http://localhost:4173).
+- Resultado observado: Cenários 1 a 5 executados no navegador em 2026-11-24, editando o Local Storage (F12). Resultado relatado pelo autor: todos conforme esperado, sem erro vermelho no Console no Cenário 3.
 
 ## Pull Request e revisão
 
-- URL ou número do Pull Request: [preencher depois]
+- URL ou número do Pull Request: #10 (https://github.com/Danilo-4397/todolab-gestao-qualidade/pull/10)
 - Autor do Pull Request: Danilo Cassiano de Souza
-- Revisor (integrante diferente do autor): [a definir]
-- O PR contém `Closes #3`? [ ] sim [ ] não
-- Resultado do CI: [ ] verde [ ] vermelho [ ] ainda em execução
-- Decisão: [ ] merge autorizado [ ] mudanças solicitadas [x] pendente
+- Revisor (integrante diferente do autor): nenhum. Projeto individual; a exceção está registrada em docs/diario.md e em comentário no PR.
+- O PR contém `Closes #3`? [x] sim [ ] não
+- Resultado do CI: [x] verde [ ] vermelho [ ] ainda em execução (Quality Gate 0, job lint-and-build, no último commit da branch)
+- Decisão: merge feito pelo autor, sem revisão independente (exceção registrada em docs/diario.md). A revisão independente segue pendente.
 
 ## Aprendizado da rodada
 
