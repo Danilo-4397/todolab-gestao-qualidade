@@ -78,9 +78,9 @@ Resultado real do `npm run check`:
 
 Verificação manual realizada:
 
-- Passos: [preencher depois]
-- Resultado observado: [preencher depois]
-- Pendências ou riscos: [preencher depois]
+- Passos: no site em execução, o autor tentou adicionar uma tarefa com o campo vazio e outra só com espaços; depois recarregou a página (F5) com tarefas na lista e abriu o Console do navegador (F12).
+- Resultado observado: informado pelo autor em 2026-11-27. A tarefa em branco e a só com espaços não foram criadas; ao recarregar, as tarefas continuaram na lista; o Console não mostrou nenhum erro.
+- Pendências ou riscos: nenhuma informada pelo autor.
 
 ## Pull Request e revisão
 
@@ -93,13 +93,13 @@ Verificação manual realizada:
 - Comentário substantivo do revisor: não houve revisão independente; o autor registrou a exceção em comentário no PR.
 - Há mudanças solicitadas abertas? [ ] sim [x] não (não houve revisão)
 - A aprovação é da versão atual, depois das últimas correções? [ ] sim [ ] não [x] não houve aprovação de terceiro
-- Aceite manual registrado, com cenários e resultado observado: [a preencher pelo autor: a seção "Verificação manual realizada" acima ainda está em branco]
+- Aceite manual registrado, com cenários e resultado observado: sim, na seção "Verificação manual realizada" acima (informado pelo autor em 2026-11-27, depois do merge).
 - Decisão: merge feito pelo autor, sem revisão independente (exceção registrada em docs/diario.md). A revisão independente segue pendente.
 
 O merge só é autorizado com CI verde, nenhuma mudança solicitada aberta, aceite manual registrado e aprovação da versão atual. Nesta rodada faltou a aprovação de terceiro (projeto individual); o merge foi feito pelo autor como exceção registrada.
 
 ## Aprendizado da rodada
 
-- Ambiguidade encontrada: [preencher depois]
-- Decisão tomada: [preencher depois]
-- Próxima melhoria de processo: [preencher depois]
+- Ambiguidade encontrada: não registrada pela equipe nesta rodada.
+- Decisão tomada: não registrada pela equipe nesta rodada.
+- Próxima melhoria de processo: não definida pela equipe nesta rodada. Pendência já registrada em `docs/diario.md`: ausência de revisor independente.

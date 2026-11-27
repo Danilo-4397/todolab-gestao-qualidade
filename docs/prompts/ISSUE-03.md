@@ -80,4 +80,4 @@ Verificação manual realizada:
 ## Aprendizado da rodada
 
 - Ambiguidade encontrada: a Issue não diz o que fazer com itens malformados dentro de uma lista válida. Ficou fora do escopo.
-- Próxima melhoria de processo: [preencher depois pela equipe]
+- Próxima melhoria de processo: não definida pela equipe nesta rodada. Pendência já registrada em `docs/diario.md`: ausência de revisor independente.

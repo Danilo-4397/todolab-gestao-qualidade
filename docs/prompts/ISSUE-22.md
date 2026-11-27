@@ -45,7 +45,7 @@ não alterar a lógica da cidade (cidade.js) nem os testes.
 - [ ] O diff foi lido pela equipe.
 - [ ] Os critérios de aceite foram comparados com a alteração.
 - [x] `npm run check` foi executado.
-- [ ] A verificação manual no navegador foi realizada pelo autor.
+- [x] A verificação manual no navegador foi realizada pelo autor no site publicado, em 2026-11-27 (17 prédios, visual novo).
 - [ ] Pendências, limitações ou dúvidas foram registradas abaixo.
 
 Resultados reais, obtidos pela IA antes do PR:
@@ -63,14 +63,14 @@ Verificação visual feita pela IA em Chromium, com **dados simulados** da API (
 
 ## Pull Request e revisão
 
-- URL ou número do Pull Request: preencher depois do merge
+- URL ou número do Pull Request: #24 (https://github.com/Danilo-4397/todolab-gestao-qualidade/pull/24); commit do merge na main: cd0803c
 - Autor do Pull Request: Danilo Cassiano de Souza
 - Revisor (integrante diferente do autor): nenhum. Projeto individual; a exceção está registrada em `docs/diario.md` e em comentário no PR.
-- O PR contém `Closes #22`? preencher ao abrir o PR
-- Resultado do CI: preencher depois do CI
-- Decisão: preencher depois do merge
+- O PR contém `Closes #22`? [x] sim [ ] não
+- Resultado do CI: [x] verde [ ] vermelho [ ] ainda em execução (Quality Gate 0, no último commit da branch)
+- Decisão: merge feito pelo autor, sem revisão independente (exceção registrada em docs/diario.md). Depois do merge o autor abriu o site publicado e confirmou o visual novo (cidade noturna, prédios com janelas e painel de tarefas).
 
 ## Aprendizado da rodada
 
 - Ambiguidade encontrada: "mais bonito" não é um critério verificável. Decisão: critérios por comportamento (cada PR vira um prédio com janelas, celular sem cortes, menos movimento respeitado).
-- Próxima melhoria de processo: [preencher depois pela equipe]
+- Próxima melhoria de processo: não definida pela equipe nesta rodada. Pendência já registrada em `docs/diario.md`: ausência de revisor independente.
