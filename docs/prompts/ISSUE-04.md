@@ -83,5 +83,5 @@ Verificação manual realizada:
 ## Aprendizado da rodada
 
 - Ambiguidade encontrada: a Issue não define a posição do botão. Decisão: rodapé da lista.
-- Próxima melhoria de processo: [preencher depois pela equipe]
+- Próxima melhoria de processo: não definida pela equipe nesta rodada. Pendência já registrada em `docs/diario.md`: ausência de revisor independente.
 - Conflito com a Issue #2: as duas alteram `index.html`, `src/app.js` e `src/store.js`. Foi resolvido nesta branch, mantendo as duas funcionalidades, e os testes das duas (12) passam.

@@ -86,4 +86,4 @@ Verificação manual realizada:
 
 - Ambiguidade encontrada: a Issue não diz se o contador deve ficar visível com a lista vazia. Decisão: sim, mostra "0 itens restantes" (Cenário 1).
 - Decisão tomada: ver "Decisões técnicas".
-- Próxima melhoria de processo: [preencher depois pela equipe]
+- Próxima melhoria de processo: não definida pela equipe nesta rodada. Pendência já registrada em `docs/diario.md`: ausência de revisor independente.

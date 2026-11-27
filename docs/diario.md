@@ -42,3 +42,24 @@ Danilo Cassiano de Souza em todos os papéis (Tech Lead, QA, Documentation & Met
 - 2026-11-22: as Issues #2 a #5 ficaram fora do planejamento da Sprint 01 (que previa #1 e #2). A #2 está nela; #3, #4 e #5 foram adiantadas por decisão do autor devido ao prazo.
 - 2026-11-24: rastreabilidade entre Issues e Pull Requests integrados na main, todos com Quality Gate 0 verde e merge feito pelo autor: Issue #1 → PR #6; Issue #2 → PR #8; Issue #4 → PR #9; Issue #3 → PR #10; Issue #5 → PR #11; Issue #7 → PR #12. Nenhum teve revisão independente; a exceção está registrada acima.
 - 2026-11-24: o teste do Cenário 5 da Issue #5 (falha ao consultar o GitHub) foi feito com a internet do computador desligada, porque o modo Offline do navegador também bloqueia o localhost.
+- 2026-11-26: a Issue #22 (redesenho da interface e dos prédios) foi implementada pelo Claude a pedido do autor, sem validação prévia do professor (declarado na própria Issue). Integrada no PR #24. A Issue #7 (cidade no canvas) e a #22 seguem a mesma regra: demandas propostas pela equipe.
+- 2026-11-27: o autor testou a Issue #1 manualmente (tarefa em branco, recarga e Console) e informou o resultado; o registro em `docs/prompts/ISSUE-01.md` foi preenchido depois do merge.
+
+## Retrospectiva da Sprint 01
+
+Registrada em 2026-11-27, com as informações dadas pelo autor.
+
+**O que foi entregue**
+- Issues #1 a #5, #7 e #22 integradas (PRs #6, #8 a #12 e #24), com testes automatizados, cobertura mínima de 60%, guard-tests e testes E2E.
+- Esteira de qualidade: níveis 0, 2, 3, 4, 5, 6, 7 e 8 ativos; release `v1.0.0` publicada; site no GitHub Pages.
+
+**O que não foi cumprido**
+- Nível 1 (aprovação de terceiro) e revisão independente dos PRs: o projeto é individual e não foi possível encontrar outra pessoa para revisar. A exceção está registrada acima e em cada PR.
+
+**Esforço real:** cerca de 14 horas, informado pelo autor.
+
+**Aprendizados (palavras do autor):** aprendeu a criar Issues e branches e, pela primeira vez, a trabalhar com o GitHub integrado a um projeto; "um pouco de tudo".
+
+**O que faria diferente:** não informado pelo autor.
+
+**Autoria:** a implementação das Issues #2, #3, #4, #5, #7 e #22 e dos níveis 2 a 8 foi feita pelo Claude (Claude Code), a pedido do autor, e não pelo GitHub Copilot.

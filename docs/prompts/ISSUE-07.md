@@ -93,4 +93,4 @@ Verificação manual realizada pela equipe:
 ## Aprendizado da rodada
 
 - Ambiguidade encontrada: a Issue não define a altura dos prédios. Decisão: por tipo do PR, para não inventar dado.
-- Próxima melhoria de processo: [preencher depois pela equipe]
+- Próxima melhoria de processo: não definida pela equipe nesta rodada. Pendência já registrada em `docs/diario.md`: ausência de revisor independente.
